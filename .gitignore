@@ -1,0 +1,16 @@
+# PERSONNALS FILES
+gorilla*
+*.txt
+
+# *.pdf
+*.zip
+copy/
+
+# C
+objs
+a.out*
+*.o
+*.d
+
+# OTHERS
+.DS_Store
