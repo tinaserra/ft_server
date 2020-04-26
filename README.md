@@ -30,6 +30,15 @@ Chaque conteneur peut être relié aux autres par des réseaux virtuels. Il est 
 
 ### Différences entre une VM et des conteneurs
 
+|VM|Conteneurs|
+|Repose sur un Hyperviseur qui va permettre d’emuler des machines au sens large, y compris les éléments physiques de la machine.|Ne repose pas forcément sur un hyperviseur mais sur un serveur plus classiquement.|
+|Chaque machine dispose d’un OS sur le quel on dispose d’une ou plusieurs applications, bases de données, apache…|On dispose d’un moteur de conteneur (Docker)
+On dispose d’applications installées dans chacun des conteneurs
+Un seul système d’exploitation : celui de la machine host qui fait bénéficier de ses ressources, son noyau, a chacun de ses conteneurs|
+|Volumetrie de plusieurs Go|Beaucoup plus léger (on dépasse rarement 1 Go voir même 500 Mo)|
+||On rentre dans le micro service : une application va être découpée en plusieurs petits services (bases de données, apache, services applicatifs…) ne veut pas dire que les applications peuvent supporter moins de charges ou de fréquentations ou de ressources, on est simplement plus segmenté|
+
+
 ## COMMANDES 🦁
 
 ## USEFUL LINKS 🤙🏼
