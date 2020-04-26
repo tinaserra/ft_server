@@ -4,7 +4,7 @@
 
 Ce sujet à pour but de vous faire découvir découvrir l’administration système en vous sensibilisant a l’importance de l’utilisation de scripts pour automatiser vos taches. Pour ce faire, nous allons vous faire découvrir la technologie "Docker" afin de vous faire installer un server web complet, qui sera capable de faire tourner plusieurs services, tel qu’un Wordpress, Phpmyadmin, ainsi qu’une base de donnée.
 
-Subject -> [EN](https://github.com/tinaserra/ft_server/blob/master/links/ft_server_en.pdf) | [FR](https://github.com/tinaserra/ft_server/blob/master/links/ft_server_fr.pdf)
+Sujet -> [EN](https://github.com/tinaserra/ft_server/blob/master/links/ft_server_en.pdf) | [FR](https://github.com/tinaserra/ft_server/blob/master/links/ft_server_fr.pdf)
 
 ## DOCKER 😎
 
@@ -36,7 +36,13 @@ Chaque conteneur peut être relié aux autres par des réseaux virtuels. Il est 
 
 ### Incontournables
 
+* [The comprehensive Introduction to Docker](http://blog.brew.com.hk/introduction-to-docker/)
+* [A propos des images et des commandes](https://www.wanadev.fr/24-tuto-docker-demarrer-docker-partie-2/)
+* [Comprendre et mettre en place Docker](https://guillaumebriday.fr/comprendre-et-mettre-en-place-docker)
+* [Installation et foncionnement Docker](https://www.ionos.fr/digitalguide/serveur/configuration/tutoriel-docker-installation-et-premiers-pas/)
+
 ### Vidéos
 
-
+* [Docker - Premiers pas 1](https://www.youtube.com/watch?v=fdlZqRZXWOc)
+* [Presentation de Docker](https://www.youtube.com/watch?v=XgKOC6X8W28)
 
