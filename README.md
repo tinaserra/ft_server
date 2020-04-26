@@ -31,6 +31,7 @@ Chaque conteneur peut être relié aux autres par des réseaux virtuels. Il est 
 ### Différences entre une VM et des conteneurs
 
 |VM|Conteneurs|
+|-----|-----|
 |Repose sur un Hyperviseur qui va permettre d’emuler des machines au sens large, y compris les éléments physiques de la machine.|Ne repose pas forcément sur un hyperviseur mais sur un serveur plus classiquement.|
 |Chaque machine dispose d’un OS sur le quel on dispose d’une ou plusieurs applications, bases de données, apache…|On dispose d’un moteur de conteneur (Docker)
 On dispose d’applications installées dans chacun des conteneurs
