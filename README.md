@@ -8,7 +8,7 @@ Sujet -> [EN](https://github.com/tinaserra/ft_server/blob/master/links/ft_server
 
 ## DOCKER 😎
 
-### Qu’est-ce que docker ?
+### Qu’est-ce que ```docker``` ?
 
 Docker est un logiciel libre permettant de lancer des applications dans des conteneurs logiciels.
 
@@ -20,13 +20,19 @@ Docker accède aux capacités de virtualisation du noyau Linux, soit directement
 
 Utiliser Docker pour créer et gérer des conteneurs peut simplifier la mise en œuvre de systèmes distribués en permettant à de multiples applications, tâches de fond et autres processus de s'exécuter de façon autonome sur une seule machine physique ou à travers un éventail de machines isolées. 
 
-### Qu’est-ce qu’un conteneur ?
+### Qu’est-ce qu’un ```container``` ?
 
 L'objectif d'un conteneur est le même que pour un serveur dédié virtuel : héberger des services sur un même serveur physique tout en les isolant les uns des autres. 
 Un conteneur est cependant moins figé qu'une machine virtuelle en matière de taille de disque et de ressources allouées.
 
 Un conteneur permet d'isoler chaque service : le serveur web, la base de données, des applications pouvant être exécutées de façon indépendante dans leur conteneur dédié, contenant uniquement les dépendances nécessaires. 
 Chaque conteneur peut être relié aux autres par des réseaux virtuels. Il est possible de monter des volumes de disque de la machine hôte dans un conteneur.
+
+### Quest-ce qu'une ```image``` ?
+
+Une image est un container statique. On pourrait comparer une image à une capture d'un container à un moment donné, d'une sorte de snapshot d'un de vos containers. Lorsqu'on souhaite travailler avec un container, on déclare forcément un container à partir d'une image.
+
+De plus, les images Docker fonctionnent grâce à de l'héritage d'autres images. Votre image de Tomcat hérite elle-même de l'image de Java. Cette même image de Java qui a peut-être été construite à partir d'une Debian. Les héritages peuvent ainsi aller très loin ! Le container créé à partir d'une image contient le delta entre l'image de base à partir de laquelle le container a été instancié et l'état actuel. Grâce à ce système, la duplication de donnée est faible.
 
 ### Différences entre une VM et des conteneurs
 
@@ -42,7 +48,7 @@ Chaque conteneur peut être relié aux autres par des réseaux virtuels. Il est 
 
 Depuis un terminal, si vous exécutez la commande docker, vous obtiendrez une liste de commandes exécutables, que voici :
 
-```js
+```
 attach    Attach to a running container
 build     Build an image from a Dockerfile
 commit    Create a new image from a container's changes
@@ -82,6 +88,9 @@ version   Show the Docker version information
 wait      Block until a container stops, then print its exit code
 ```
 
+En savoir plus sur les [commandes](https://www.wanadev.fr/27-tuto-docker-les-commandes-et-docker-partie-3/)
+
+
 ## USEFUL LINKS 🤙🏼
 
 ### Incontournables
@@ -93,6 +102,7 @@ wait      Block until a container stops, then print its exit code
 
 ### Vidéos
 
-* [Docker - Premiers pas 1](https://www.youtube.com/watch?v=fdlZqRZXWOc)
-* [Presentation de Docker](https://www.youtube.com/watch?v=XgKOC6X8W28)
+* Pour commencer - [Docker - Premiers pas 1](https://www.youtube.com/watch?v=fdlZqRZXWOc)
+* Plus complet - [Presentation de Docker](https://www.youtube.com/watch?v=XgKOC6X8W28)
+* Bonus - [Environement de developpement](https://www.youtube.com/watch?v=F9R1EOaA7EA)
 
