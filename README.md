@@ -34,7 +34,7 @@ Une image est un container statique. On pourrait comparer une image à une captu
 
 De plus, les images Docker fonctionnent grâce à de l'héritage d'autres images. Votre image de Tomcat hérite elle-même de l'image de Java. Cette même image de Java qui a peut-être été construite à partir d'une Debian. Les héritages peuvent ainsi aller très loin ! Le container créé à partir d'une image contient le delta entre l'image de base à partir de laquelle le container a été instancié et l'état actuel. Grâce à ce système, la duplication de donnée est faible.
 
-### Différences entre une VM et des conteneurs
+### Différences entre VM et conteneurs
 
 |VM|Conteneurs|
 | :--- | :--- |
@@ -46,46 +46,32 @@ De plus, les images Docker fonctionnent grâce à de l'héritage d'autres images
 
 ## COMMANDES 🦁
 
-Depuis un terminal, si vous exécutez la commande docker, vous obtiendrez une liste de commandes exécutables, que voici :
+En exécutant la commande docker dans un terminal, on obtient une liste de commandes exécutables.
+
+
 
 ```
-attach    Attach to a running container
 build     Build an image from a Dockerfile
-commit    Create a new image from a container's changes
+
 cp        Copy files/folders from a container's filesystem to the host path
-create    Create a new container
-diff      Inspect changes on a container's filesystem
-events    Get real time events from the server
+
 exec      Run a command in an existing container
-export    Stream the contents of a container as a tar archive
-history   Show the history of an image
-images    List images
-import    Create a new filesystem image from the contents of a tarball
-info      Display system-wide information
-inspect   Return low-level information on a container
-kill      Kill a running container
-load      Load an image from a tar archive
-login     Register or log in to a Docker registry server
-logout    Log out from a Docker registry server
-logs      Fetch the logs of a container
-port      Lookup the public-facing port that is NAT-ed to PRIVATE_PORT
+
 pause     Pause all processes within a container
 ps        List containers
 pull      Pull an image or a repository from a Docker registry server
 push      Push an image or a repository to a Docker registry server
 restart   Restart a running container
 rm        Remove one or more containers
-rmi       Remove one or more images
+
 run       Run a command in a new container
+$ docker run -ti 'nom de l'image' 
+l'option -ti sert a rester dans le container apres l'avoir run
+
 save      Save an image to a tar archive
-search    Search for an image on the Docker Hub
+
 start     Start a stopped container
 stop      Stop a running container
-tag       Tag an image into a repository
-top       Lookup the running processes of a container
-unpause   Unpause a paused container
-version   Show the Docker version information
-wait      Block until a container stops, then print its exit code
 ```
 
 En savoir plus sur les [commandes](https://www.wanadev.fr/27-tuto-docker-les-commandes-et-docker-partie-3/)
@@ -102,7 +88,7 @@ En savoir plus sur les [commandes](https://www.wanadev.fr/27-tuto-docker-les-com
 
 ### Vidéos
 
-* Pour commencer - [Docker - Premiers pas 1](https://www.youtube.com/watch?v=fdlZqRZXWOc)
+* Pour commencer - [Docker - Premiers pas](https://www.youtube.com/watch?v=fdlZqRZXWOc)
 * Plus complet - [Presentation de Docker](https://www.youtube.com/watch?v=XgKOC6X8W28)
 * Bonus - [Environement de developpement](https://www.youtube.com/watch?v=F9R1EOaA7EA)
 
