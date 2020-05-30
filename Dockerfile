@@ -6,20 +6,19 @@ MAINTAINER vserra <vserra@sutdent.42.fr>
 
 # Pre-reqs
 RUN apt-get update
-RUN apt-get -y install wget nginx
+RUN apt-get -y install wget nginx unzip
 RUN apt-get -y install php7.3 php-mysql php-fpm php-cli php-mbstring
 RUN apt-get -y install mariadb-server
 
 # Application install
 RUN cd /tmp/ \
 && wget https://wordpress.org/latest.zip \
-&& apt-get install -y unzip \
-&& unzip latest.zip -d /var/www/html \
-#&& mv wordpress /var/www/wordpress \ 
-&& cd /var/www/html \
+&& unzip latest.zip -d /var/www/wordpress \
+#&& mv wordpress /var/www/wordpess \ 
+#&& cd /var/www/html \
 #&& rm index.html \ 
-&& cp -R wordpress/* ./ \ 
-&& rm -Rf wordpress \
+#&& cp -R wordpress/* ./ \ 
+#&& rm -Rf wordpress \
 
 # On donne les droits à l’utilisateur et au groupe d’Apache (www-data) sur les répertoires concernés (Etape importante) :
 && cd /var/www/ \
