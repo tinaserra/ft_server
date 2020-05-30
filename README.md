@@ -8,7 +8,7 @@ Sujet -> [EN](https://github.com/tinaserra/ft_server/blob/master/links/ft_server
 
 ## DOCKER 😎
 
-### liens
+### Liens
 
 * [The comprehensive Introduction to Docker](http://blog.brew.com.hk/introduction-to-docker/)
 * [A propos des images et des commandes](https://www.wanadev.fr/24-tuto-docker-demarrer-docker-partie-2/)
@@ -27,7 +27,7 @@ Sujet -> [EN](https://github.com/tinaserra/ft_server/blob/master/links/ft_server
 
 ## COMMANDES 🦁
 
-En exécutant la commande docker dans un terminal, on obtient une liste de commandes exécutables.
+En exécutant la commande ```docker``` dans un terminal, on obtient une liste de commandes exécutables.
 
 ```
 # Build image
