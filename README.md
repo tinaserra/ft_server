@@ -29,22 +29,22 @@ Sujet -> [EN](https://github.com/tinaserra/ft_server/blob/master/links/ft_server
 
 En exécutant la commande ```docker``` dans un terminal, on obtient une liste de commandes exécutables.
 
-```
+```s
 # Build image
 docker build -t server .
 
 # Run image
-docker run -it -p 80:80 server
+docker run -ti -p 80:80 server
 ```
 
-En savoir plus sur les [commandes](https://www.wanadev.fr/27-tuto-docker-les-commandes-et-docker-partie-3/)
+[En savoir plus](https://www.wanadev.fr/27-tuto-docker-les-commandes-et-docker-partie-3/) sur les commandes.
 
 
 ## USEFUL LINKS 🤙🏼
 
 ### Doc
 
-* SSl - [Self-Signed SSL Certificate](https://linuxize.com/post/creating-a-self-signed-ssl-certificate/) & [certificat SSL sous NGinx](https://admin-serv.net/blog/670/creer-et-installer-un-certificat-ssl-sous-nginx/)
+* SSL - [Self-Signed SSL Certificate](https://linuxize.com/post/creating-a-self-signed-ssl-certificate/) & [certificat SSL sous NGinx](https://admin-serv.net/blog/670/creer-et-installer-un-certificat-ssl-sous-nginx/)
 * Install [MariaDB](https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mariadb-php-lemp-stack-on-debian-10)
 * Install [phpMyAdmin](https://www.digitalocean.com/community/tutorials/how-to-install-phpmyadmin-from-source-debian-10)
 * Install [Wordpress](https://www.osradar.com/install-wordpress-debian-10/)
@@ -54,4 +54,5 @@ En savoir plus sur les [commandes](https://www.wanadev.fr/27-tuto-docker-les-com
 * Pour commencer - [Docker - Premiers pas](https://www.youtube.com/watch?v=fdlZqRZXWOc)
 * Plus complet - [Presentation de Docker](https://www.youtube.com/watch?v=XgKOC6X8W28)
 * Autre - [Environement de developpement](https://www.youtube.com/watch?v=F9R1EOaA7EA)
-* Install [Nginx](https://www.youtube.com/watch?v=YD_exb9aPZU)
+* Les bases du [Dockerfile](https://www.youtube.com/watch?v=8q0wcmeJ2Gk) 
+* Installer [Nginx](https://www.youtube.com/watch?v=YD_exb9aPZU)
