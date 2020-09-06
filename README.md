@@ -2,18 +2,21 @@
 
 ## INTRODUCTION 🤓
 
-Ce sujet à pour but de vous faire découvir découvrir l’administration système en vous sensibilisant a l’importance de l’utilisation de scripts pour automatiser vos taches. Pour ce faire, nous allons vous faire découvrir la technologie "Docker" afin de vous faire installer un server web complet, qui sera capable de faire tourner plusieurs services, tel qu’un Wordpress, Phpmyadmin, ainsi qu’une base de donnée.
+Le but du sujet est de créer un server web complet avec la technologie **Docker**, qui sera capable de faire tourner plusieurs services, tel qu’un **Wordpress**, **Phpmyadmin**, ainsi qu’une **base de donnée**.
 
 Sujet -> [EN](https://github.com/tinaserra/ft_server/blob/master/links/ft_server_en.pdf) | [FR](https://github.com/tinaserra/ft_server/blob/master/links/ft_server_fr.pdf)
 
 ## DOCKER 😎
 
-### Liens
+### Comprendre et installer Docker
 
 * [The comprehensive Introduction to Docker](http://blog.brew.com.hk/introduction-to-docker/)
 * [A propos des images et des commandes](https://www.wanadev.fr/24-tuto-docker-demarrer-docker-partie-2/)
 * [Comprendre et mettre en place Docker](https://guillaumebriday.fr/comprendre-et-mettre-en-place-docker)
 * [Installation et foncionnement Docker](https://www.ionos.fr/digitalguide/serveur/configuration/tutoriel-docker-installation-et-premiers-pas/)
+
+### Le Dockerfile
+
 * [Best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 * [Dockerfile reference](https://docs.docker.com/engine/reference/builder/#entrypoint)
 
@@ -32,11 +35,29 @@ Sujet -> [EN](https://github.com/tinaserra/ft_server/blob/master/links/ft_server
 En exécutant la commande ```docker``` dans un terminal, on obtient une liste de commandes exécutables.
 
 ```s
-# Build image
-docker build -t server .
+# Créer une image
+docker build -t [nom_image] .
 
-# Run image
-docker run -ti -p 80:80 server
+# Vérifie si l'image est crée
+docker images
+
+# Supprimer une ou toutes les images
+docker rmi [nom_image]
+docker rmi $(docker images -a -q)
+
+# Lancer le conteneur (ici on ouvre le port 80)
+docker run -d -p 80:80 [nom_image]
+docker run -d -p 80:80 --name=[nom_conteneur] [nom_image]
+
+# Afficher les conteneurs qui tournent, -a pour all affiche tous les conteneurs
+docker ps
+docker ps -a
+
+# Arrêter un conteneur
+docker stop [nom_image]
+
+# entrer dans un conteneur
+docker exec -ti [nom_conteneur_ou_id] bash
 ```
 
 [En savoir plus](https://www.wanadev.fr/27-tuto-docker-les-commandes-et-docker-partie-3/) sur les commandes.
