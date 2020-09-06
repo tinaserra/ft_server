@@ -14,6 +14,8 @@ Sujet -> [EN](https://github.com/tinaserra/ft_server/blob/master/links/ft_server
 * [A propos des images et des commandes](https://www.wanadev.fr/24-tuto-docker-demarrer-docker-partie-2/)
 * [Comprendre et mettre en place Docker](https://guillaumebriday.fr/comprendre-et-mettre-en-place-docker)
 * [Installation et foncionnement Docker](https://www.ionos.fr/digitalguide/serveur/configuration/tutoriel-docker-installation-et-premiers-pas/)
+* [Best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+* [Dockerfile reference](https://docs.docker.com/engine/reference/builder/#entrypoint)
 
 ### Différences entre VM et conteneurs
 
