@@ -7,7 +7,9 @@ MAINTAINER vserra <vserra@sutdent.42.fr>
 # Prerequis
 RUN apt-get update
 RUN apt-get install -y openssl
-RUN apt-get install -y php-mysql php-fpm mariadb-server wget nginx unzip
+RUN apt-get install -y mariadb-server wget nginx unzip
+RUN apt-get install -y php7.3 php7.3-fpm php7.3-mysql php-common php7.3-cli php7.3-common php7.3-json php7.3-opcache php7.3-readline
+# RUN apt-get install -y php-mysql php-fpm mariadb-server wget nginx unzip
 
 # Certificat SSL
 RUN mkdir /etc/nginx/ssl \
