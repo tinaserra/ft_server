@@ -10,6 +10,7 @@ RUN apt-get install -y openssl
 RUN apt-get install -y mariadb-server wget nginx unzip
 RUN apt-get install -y php7.3 php7.3-fpm php7.3-mysql php-common php7.3-cli php7.3-common php7.3-json php7.3-opcache php7.3-readline
 # RUN apt-get install -y php-mysql php-fpm mariadb-server wget nginx unzip
+# RUN mkdir -p /var/www/localhost/
 
 # Certificat SSL
 RUN mkdir /etc/nginx/ssl \
@@ -18,22 +19,22 @@ RUN mkdir /etc/nginx/ssl \
 # Installation Wordpress
 RUN cd /tmp/ \
 && wget https://wordpress.org/latest.zip \
-&& unzip latest.zip -d /var/www/wordpress
-# ADD srcs/wp-config.php /var/www/wordpress
-RUN cd /var/www/ \
+&& unzip latest.zip -d /var/www/localhost/wordpress
+# ADD srcs/wp-config.php /var/www/localhost/wordpress
+RUN cd /var/www/RUN mkdir /var/wwww/localhost \
 && chown -Rv www-data:www-data * \
 && find . -type d -exec chmod 0755 {} \; \
 && find . -type f -exec chmod 0644 {} \; 
 
 # Installation phpMyAdmin
-RUN cd /tmp/ \
-&& wget https://files.phpmyadmin.net/phpMyAdmin/4.9.0.1/phpMyAdmin-4.9.0.1-all-languages.tar.gz \
-&& tar -zxvf phpMyAdmin-4.9.0.1-all-languages.tar.gz \
-&& mv phpMyAdmin-4.9.0.1-all-languages /var/www/phpMyAdmin
-ADD srcs/config.inc.php var/www/phpMyAdmin
-RUN chmod 660 /var/www/phpMyAdmin/config.inc.php
-RUN chown -R www-data:www-data /var/www/phpMyAdmin
-RUN rm -rf /tmp/*
+# RUN cd /tmp/ \
+# && wget https://files.phpmyadmin.net/phpMyAdmin/4.9.0.1/phpMyAdmin-4.9.0.1-all-languages.tar.gz \
+# && tar -zxvf phpMyAdmin-4.9.0.1-all-languages.tar.gz \
+# && mv phpMyAdmin-4.9.0.1-all-languages /var/www/localhost/phpMyAdmin
+# ADD srcs/config.inc.php var/www/localhost/phpMyAdmin
+# RUN chmod 660 /var/www/localhost/phpMyAdmin/config.inc.php
+# RUN chown -R www-data:www-data /var/www/localhost/phpMyAdmin
+# RUN rm -rf /tmp/*
 
 # Configure MySQL
 RUN service mysql start \
