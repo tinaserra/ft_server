@@ -5,13 +5,11 @@ server {
     listen 443 ssl;
 	listen [::]:443 ssl;
 
-	index /var/www/index.php;
-
     ssl_certificate /etc/nginx/ssl/localhost.pem;
     ssl_certificate_key /etc/nginx/ssl/localhost.key;
 	root /var/www;
 
-	index index.html index.htm index.nginx-debian.html;
+	index test.php index.html index.htm index.nginx-debian.html;
 
 	server_name _;
 

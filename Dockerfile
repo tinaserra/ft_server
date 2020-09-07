@@ -30,9 +30,9 @@ RUN cd /tmp/ \
 && wget https://files.phpmyadmin.net/phpMyAdmin/4.9.0.1/phpMyAdmin-4.9.0.1-all-languages.tar.gz \
 && tar -zxvf phpMyAdmin-4.9.0.1-all-languages.tar.gz \
 && mv phpMyAdmin-4.9.0.1-all-languages /var/www/phpMyAdmin
-# ADD srcs/config.inc.php var/www/phpMyAdmin
-# RUN chmod 660 /var/www/localhost/phpmyadmin/config.inc.php
-RUN chown -Rv www-data:www-data /var/www/phpMyAdmin
+ADD srcs/config.inc.php var/www/phpMyAdmin
+RUN chmod 660 /var/www/phpMyAdmin/config.inc.php
+RUN chown -R www-data:www-data /var/www/phpMyAdmin
 RUN rm -rf /tmp/*
 
 # Configure MySQL
@@ -41,8 +41,8 @@ RUN service mysql start \
 
 # ADD ou COPY -> /host /dest (avec ADD on peut mettre un https:// au lieu du /host)
 ADD srcs/script.sh ./
-ADD srcs/index.html /var/www/html
-ADD srcs/index.php /var/www
+# COPY srcs/index.html /var/www/html
+ADD srcs/test.php /var/www/html
 
 EXPOSE 80
 EXPOSE 443
