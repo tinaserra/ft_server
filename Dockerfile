@@ -24,6 +24,7 @@ RUN service mysql start \
 && mysql --execute="CREATE USER 'vserra'@'localhost';ALTER USER 'vserra'@'localhost' IDENTIFIED BY '123soleil';GRANT ALL PRIVILEGES ON *.* TO 'vserra'@'localhost';CREATE DATABASE wordpress;"
 
 # Installation Wordpress
+
 # RUN cd /tmp/ \
 # && wget https://wordpress.org/latest.zip \
 # && unzip latest.zip -d /var/www/wordpress
@@ -60,9 +61,7 @@ ADD srcs/config.inc.php var/www/phpmyadmin
 ADD srcs/script.sh ./
 ADD srcs/default etc/nginx/sites-available
 ADD srcs/index.html /var/www/html
-# ADD srcs/wp-config.php /var/www/wordpress
 ADD srcs/test.php /var/www
-# ADD srcs/test.php /var/www/html
 
 EXPOSE 80
 EXPOSE 443
