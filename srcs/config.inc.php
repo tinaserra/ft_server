@@ -32,12 +32,5 @@ $cfg['Servers'][$i]['host'] = 'localhost';
 $cfg['Servers'][$i]['compress'] = false;
 $cfg['Servers'][$i]['AllowNoPassword'] = true;
 
-/**
- * phpMyAdmin configuration storage settings.
- */
-
-$cfg['Servers'][$i]['controluser'] = 'root';
-$cfg['Servers'][$i]['controlpass'] = '';
-
 $cfg['UploadDir'] = '';
 $cfg['SaveDir'] = '';
