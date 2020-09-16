@@ -34,7 +34,7 @@ Sujet -> [EN](https://github.com/tinaserra/ft_server/blob/master/links/ft_server
 
 En exécutant la commande ```docker``` dans un terminal, on obtient une liste de commandes exécutables.
 
-```s
+```c
 # Créer une image
 docker build -t [nom_image] .
 
