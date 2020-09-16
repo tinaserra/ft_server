@@ -35,41 +35,41 @@ Sujet -> [EN](https://github.com/tinaserra/ft_server/blob/master/links/ft_server
 En exécutant la commande ```docker``` dans un terminal, on obtient une liste de commandes exécutables.
 
 
-Créer une image
-```s
+* Créer une image
+```
 docker build -t [nom_image] .
 ```
 
-Vérifie si l'image est crée
-```js
+* Vérifie si l'image est crée
+```
 docker images
 ```
 
-Supprimer une ou toutes les images
-```js
+* Supprimer une ou toutes les images
+```
 docker rmi [nom_image]
 docker rmi $(docker images -a -q)
 ```
 
-Lancer le conteneur (ici on ouvre le port 80)
-```s
+* Lancer le conteneur (ici on ouvre le port 80)
+```
 docker run -d -p 80:80 [nom_image]
 docker run -d -p 80:80 --name=[nom_conteneur] [nom_image]
 ```
 
-Afficher les conteneurs qui tournent, -a pour all affiche tous les conteneurs
-```c
+* Afficher les conteneurs qui tournent, -a pour all affiche tous les conteneurs
+```
 docker ps
 docker ps -a
 ```
 
-Arrêter un conteneur
-```js
+* Arrêter un conteneur
+```
 docker stop [nom_image]
 ```
 
-Entrer dans un conteneur
-```js
+* Entrer dans un conteneur
+```
 docker exec -ti [nom_conteneur_ou_id] bash
 ```
 
